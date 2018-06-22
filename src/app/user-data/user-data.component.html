@@ -1,0 +1,10 @@
+<form [formGroup]="userForm" style="margin-left: 25%;margin-right: 25%">
+  <!-- <input class="form-control" formControlName="name"> -->
+  <select class="form-control" formControlName="name">
+    <option *ngFor="let state of dataModel" [value]="state.thainame">{{state.thainame}}</option>
+  </select>
+
+  <h4>
+    <b>User from DATA :</b> {{userForm.value | json }}
+  </h4>
+</form>

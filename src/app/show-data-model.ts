@@ -1,5 +1,5 @@
-export class DataModel {
-
+export class ShowDataModel {
+   id: '';
    fund_id: '';
    fundcode: '';
    name: '';
@@ -27,6 +27,7 @@ export class DataModel {
    fundname: '';
    infotext: '';
    language: '';
-}
 
-export const dataModel: DataModel[] = [];
+}
+export const ShowData: ShowDataModel[] = [];
+

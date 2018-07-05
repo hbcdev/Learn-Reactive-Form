@@ -1,0 +1,139 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <!-- <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"> -->
+    <!-- <span aria-hidden="true">&times;</span>
+    </button> -->
+  </div>
+  <div class="modal-body">
+
+    <!-- <p *ngIf="btnChk"> fund_id :
+      <input type="hidden" class="form-control" [value]="userForm.get('fund_id').value" formControlName="fund_id" *ngIf="!btnChk">
+      <input type="text" class="form-control" [value]="userForm.get('fund_id').value" formControlName="fund_id" *ngIf="btnChk"
+        readonly>
+      <div class="alert alert-danger" role="alert"></div>
+      <span *ngIf="userForm.get('fund_id').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+      <span *ngIf="userForm.get('fund_id').status == 'VALID' " style="color:red"></span>
+    </p> -->
+    <form [formGroup]="userForm">
+      <p>fundcode :
+        <input type="text" class="form-control" [value]="userForm.get('fundcode').value" formControlName="fundcode">
+        <span *ngIf="userForm.get('fundcode').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('fundcode').status == 'VALID' " style="color:red"></span>
+
+      </p>
+
+      <p>name :
+        <input type="text" class="form-control" [value]="userForm.get('name').value" formControlName="name">
+        <span *ngIf="userForm.get('name').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('name').status == 'VALID' " style="color:red"></span>
+      </p>
+
+      <p>thainame :
+        <input type="text" class="form-control" [value]="userForm.get('thainame').value" formControlName="thainame">
+        <span *ngIf="userForm.get('thainame').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('thainame').status == 'VALID' " style="color:red"></span>
+      </p>
+
+      <p>date_on :
+        <input type="text" class="form-control" [value]="userForm.get('date_on').value" formControlName="date_on">
+        <span *ngIf="userForm.get('date_on').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('date_on').status == 'VALID' " style="color:red"></span>
+      </p>
+
+      <p>date_off :
+        <input type="text" class="form-control" [value]="userForm.get('date_off').value" formControlName="date_off">
+      </p>
+
+      <p>exclusion :
+        <input type="text" class="form-control" [value]="userForm.get('exclusion').value" formControlName="exclusion">
+      </p>
+
+      <p>respond :
+        <input type="text" class="form-control" [value]="userForm.get('respond').value" formControlName="respond">
+        <span *ngIf="userForm.get('respond').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('respond').status == 'VALID' " style="color:red"></span>
+      </p>
+
+      <p>l_user :
+        <input type="text" class="form-control" [value]="userForm.get('l_user').value" formControlName="l_user"> </p>
+
+      <p>l_update :
+        <input type="text" class="form-control" [value]="userForm.get('l_update').value" formControlName="l_update"> </p>
+
+      <p>wt :
+        <input type="text" class="form-control" [value]="userForm.get('wt').value" formControlName="wt"> </p>
+
+      <p>wt_start :
+        <input type="text" class="form-control" [value]="userForm.get('wt_start').value" formControlName="wt_start"> </p>
+
+      <p>wt_end :
+        <input type="text" class="form-control" [value]="userForm.get('wt_end').value" formControlName="wt_end"> </p>
+
+      <p>taxid :
+        <input type="text" class="form-control" [value]="userForm.get('taxid').value" formControlName="taxid"> </p>
+
+      <p>fee :
+        <input type="text" class="form-control" [value]="userForm.get('fee').value" formControlName="fee"> </p>
+
+      <p>address :
+        <input type="text" class="form-control" [value]="userForm.get('address').value" formControlName="address">
+        <span *ngIf="userForm.get('address').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('address').status == 'VALID' " style="color:red"></span>
+      </p>
+
+      <p>phone :
+        <input type="text" class="form-control" [value]="userForm.get('phone').value" formControlName="phone">
+        <span *ngIf="userForm.get('phone').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('phone').status == 'VALID' " style="color:red"></span>
+      </p>
+
+      <p>admin :
+        <input type="text" class="form-control" [value]="userForm.get('admin').value" formControlName="admin"> </p>
+
+      <p>auditor :
+        <input type="text" class="form-control" [value]="userForm.get('auditor').value" formControlName="auditor"> </p>
+
+      <p>email :
+        <input type="text" class="form-control" [value]="userForm.get('email').value" formControlName="email"> </p>
+
+      <p>icd_group :
+        <input type="text" class="form-control" [value]="userForm.get('icd_group').value" formControlName="icd_group"> </p>
+
+      <p>queue_no :
+        <input type="text" class="form-control" [value]="userForm.get('queue_no').value" formControlName="queue_no">
+        <span *ngIf="userForm.get('queue_no').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('queue_no').status == 'VALID' " style="color:red"></span>
+      </p>
+
+      <p>timestamp_column :
+        <input type="text" class="form-control" [value]="userForm.get('timestamp_column').value" formControlName="timestamp_column"> </p>
+
+      <p>edc :
+        <input type="text" class="form-control" [value]="userForm.get('edc').value" formControlName="edc">
+        <span *ngIf="userForm.get('edc').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('edc').status == 'VALID' " style="color:red"></span>
+      </p>
+
+      <p>fundname :
+        <input type="text" class="form-control" [value]="userForm.get('fundname').value" formControlName="fundname"> </p>
+
+      <p>infotext :
+        <input type="text" class="form-control" [value]="userForm.get('infotext').value" formControlName="infotext"> </p>
+
+      <p>language :
+        <input type="text" class="form-control" [value]="userForm.get('language').value" formControlName="language">
+        <span *ngIf="userForm.get('language').status == 'INVALID' " style="color:red">**กรุณากรอกข้อมูล</span>
+        <span *ngIf="userForm.get('language').status == 'VALID' " style="color:red"></span>
+      </p>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-warning" *ngIf="btnChk" [disabled]="userForm.invalid">Save Edit</button>
+    <button type="submit" class="btn btn-success" *ngIf="!btnChk" [disabled]="userForm.invalid">Save</button>
+  </div>
+</ng-template>
+
+
+<!-- Modal -->
